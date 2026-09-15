@@ -1,4 +1,4 @@
-# Boruvka's algorithm for an undirected, weighted graph.
+# Boruvka's Algorithm
 
 # Represents a graph using an edge list
 class Graph:
