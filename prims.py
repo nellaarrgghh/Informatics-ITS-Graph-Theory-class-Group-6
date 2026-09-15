@@ -1,4 +1,4 @@
-# Prim's algorithm for an undirected, weighted graph.
+# Prim's Algorithm
 
 # Represents a graph
 class Graph:
