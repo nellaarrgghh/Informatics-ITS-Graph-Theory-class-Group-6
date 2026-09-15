@@ -74,7 +74,7 @@ def read_graph_from_input():
     return graph
 
 
-# Main execution block for reading input, running the algorithm, and error handling
+# Main execution block
 if __name__ == "__main__":
     try:
         graph = read_graph_from_input()
@@ -85,7 +85,7 @@ if __name__ == "__main__":
             print(f"{u}-{v} {weight:g}")
             total_weight += weight
         print(f"Total Weight: {total_weight:g}")
-    except RuntimeError:
+    except RuntimeError: # Error when the graph is disconnected and an MST cannot be built
         print("Error! Cannot Build MST")
     except (EOFError, TypeError, ValueError):
         print("Error! Please make sure your input is correct.")

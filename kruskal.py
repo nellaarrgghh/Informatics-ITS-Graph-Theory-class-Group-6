@@ -76,7 +76,7 @@ def read_graph_from_input():
     return graph
 
 
-# Main execution block that reads input, runs Kruskal's algorithm, and handles errors
+# Main execution block
 if __name__ == "__main__":
     try:
         graph = read_graph_from_input()
@@ -87,7 +87,7 @@ if __name__ == "__main__":
             print(f"{u}-{v} {weight:g}")
             total_weight += weight
         print(f"Total Weight: {total_weight:g}")
-    except RuntimeError:
+    except RuntimeError: # Error handling when MST cannot be built
         print("Error! Cannot Build MST")
-    except (EOFError, TypeError, ValueError):
+    except (EOFError, TypeError, ValueError): # when input is invalid
         print("Error! Please make sure your input is correct.")

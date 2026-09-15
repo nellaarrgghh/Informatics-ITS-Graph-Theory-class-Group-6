@@ -28,14 +28,14 @@ class Graph:
             rank[first] += 1
         return True
 
-    # Executes Borůvka's Algorithm to find the Minimum Spanning Tree
+    # Executes Borůvka's Algorithm to find the MST
     def boruvka_algorithm(self):
         parent = list(range(len(self.labels)))
         rank = [0] * len(self.labels)
         components = len(self.labels)
         result = []
 
-        # Continue until all components are merged into a single tree
+        # Continue until all components are merged into a tree
         round_num = 1
         while components > 1:
             print(f"\n--- Round {round_num} ({components} components remain) ---")
@@ -75,7 +75,7 @@ class Graph:
         return result
 
 
-# Parses user input to build the graph and its edges
+# Parses user input
 def read_graph_from_input():
     labels = input("Enter Nodes: ").split()
     if len(labels) < 2 or len(set(labels)) != len(labels):
