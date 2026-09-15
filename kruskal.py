@@ -1,4 +1,4 @@
-# Kruskal's algorithm for an undirected, weighted graph.
+# Kruskal's Algorithm
 
 # Represents a graph using an edge list
 class Graph:
